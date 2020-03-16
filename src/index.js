@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM is loaded");
   fetchDogs();
   fetchBreeds();
+  filterBreeds(event);
 });
 
 const breedUrl = "https://dog.ceo/api/breeds/list/all";
@@ -23,6 +24,13 @@ const populateBreedList = data => {
     dog.addEventListener("click", addColorEffect);
   }
 };
+
+// const filterBreeds = event => {
+//   const breedDropdown = document.getElementById("breed-dropdown");
+//   breedDropdown.addEventListener("change", event => {
+//     (event.target.value);
+//   });
+// };
 
 const addColorEffect = event => {
   event.target.style.color = "green";
